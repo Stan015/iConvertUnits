@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iConvertUnits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" aria-label="logo" class="logo"><span>i</span>ConvertUnits</a>
+    </header>
+
+    <main>
+        <section>
+            <div class="switch_buttons">
+                <button type="button">PX to REM</button>
+                <button type="button">PX to EM</button>
+            </div>
+
+            <div class="container">
+                <div class="converter">
+                    <div class="px_to_rem">
+                        <p>
+                            <label for="px">PX</label>
+                            <input type="text" name="px" id="px">
+                        </p>
+                        <p>
+                            <label for="rem">REM</label>
+                            <input type="text" name="rem" id="rem">
+                        </p>
+                    </div>
+
+                    <p class="base_unit">This is calculated based on 16px default font-size</p>
+                </div>
+
+                <div class="converter">
+                    <div class="px_to_em">
+                        <p>
+                            <label for="px2">PX</label>
+                            <input type="text" name="px2" id="px2">
+                        </p>
+                        <p>
+                            <label for="em">EM</label>
+                            <input type="text" name="em" id="em">
+                        </p>
+                    </div>
+
+                    <p class="base_unit">This is calculated based on 16px default font-size</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+:root {
+    --clr-primary: #eff4f8;
+
+    --bg-primary: #1c3158;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--clr-primary);
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+::before, ::after {
+box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    background-color: var(--bg-primary);    
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    width: 90%;
+    height: 6rem;
+    margin: 0 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.logo span {
+    color: #d04754;
+}
+
+main {
+    display: block;
+    width: 100%;
+    height: calc(100svh - 6rem);
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 5%;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 3rem;
+}
+
+section .switch_buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.switch_buttons button {
+    width: 5.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    border-radius: 100vh;
+    padding: 0.3rem;
+    text-align: center;
+    border: none;
+    /* border: 2px solid #d04754; */
+    background-color: unset;
+}
+
+section .container {
+    display: flex;
+}
+
+.container .converter {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.converter div {
+    display: flex;
+    gap: 1rem;
+}
+
+.converter div p {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    gap: 1rem;
+}
+
+.converter p label {
+    font-size: 1.3rem;
+}
+
+.converter p input {
+    width: 14rem;
+    height: 2.5rem;
+    border: 2px solid #a7a7a7;
+    padding: 0 1rem;
+    border-radius: 100vh;
+    text-align: center;
+    outline: none;
+    color: #d04754;
+    font-size: 1rem;
+    background-color: unset;
+
+    &:focus {
+        border: 2px solid #d04754;
+    }
+}
+
+.base_unit {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #a7b8cc;
+}
