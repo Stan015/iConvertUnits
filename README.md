@@ -11,7 +11,8 @@
 * Good regular expression to extract numbers only if user inputs lets say 100px, the number '100' is extracted and used for conversion. The regular expression also handles negative inputs, floating points numbers and of course integers.
 * Better UI to keep user happy while interacting with the app.
 * Time saving.
-* Keyboard accessibility for screen readers
+* Keyboard accessibility for screen readers.
+* Bi-directional; can be switched.
 
 ## Who can use this app?
 

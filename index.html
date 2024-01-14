@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg" href="logo.svg">
     <title>iConvertUnits</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,49 +12,78 @@
 </head>
 <body>
     <header>
-        <a href="#" aria-label="logo" class="logo"><span>i</span>ConvertUnits</a>
+        <a href="index.html" aria-labelledby="iConvertUnits logo" class="logo"><span>i</span>ConvertUnits</a>
     </header>
 
     <main>
         <section>
             <div class="switch_buttons">
-                <button type="button">PX to REM</button>
-                <button type="button">PX to EM</button>
+                <button type="button" class="default_button" aria-labelledby="PX to REM button">PX <> REM</button>
+                <button type="button" aria-labelledby="PX to EM button">PX <> EM</button>
+                <button type="button" aria-labelledby="PX to EM button">PX <> PCT</button>
             </div>
 
             <div class="container">
-                <div class="converter">
-                    <div class="px_to_rem">
-                        <p>
-                            <label for="px">PX</label>
-                            <input type="text" name="px" id="px">
-                        </p>
-                        <p>
-                            <label for="rem">REM</label>
-                            <input type="text" name="rem" id="rem">
-                        </p>
-                    </div>
-
-                    <p class="base_unit">This is calculated based on 16px default font-size</p>
+                <div class="converter px_to_rem default_converter" aria-hidden="false" aria-label="px to rem converter">
+                    <p>
+                        <label for="px">PX</label>
+                        <input type="text" name="px" id="px">
+                    </p>
+                    <img src="icons/switch_line.svg" alt="switch line icon" class="switch_line">
+                    <p>
+                        <label for="rem">REM</label>
+                        <input type="text" name="rem" id="rem">
+                    </p>
                 </div>
 
-                <div class="converter">
-                    <div class="px_to_em">
-                        <p>
-                            <label for="px2">PX</label>
-                            <input type="text" name="px2" id="px2">
-                        </p>
-                        <p>
-                            <label for="em">EM</label>
-                            <input type="text" name="em" id="em">
-                        </p>
-                    </div>
+                <div class="converter px_to_em" aria-hidden="true" aria-label="px to em converter">
+                    <p>
+                        <label for="px2">PX</label>
+                        <input type="text" name="px2" id="px2">
+                    </p>
+                    <img src="icons/switch_line.svg" alt="switch line icon" class="switch_line">
+                    <p>
+                        <label for="em">EM</label>
+                        <input type="text" name="em" id="em">
+                    </p>
+                </div>
 
-                    <p class="base_unit">This is calculated based on 16px default font-size</p>
+                <div class="converter px_to_percent" aria-hidden="true" aria-label="px to percentage converter">
+                    <p>
+                        <label for="px2">PX</label>
+                        <input type="text" name="px2" id="px3">
+                    </p>
+                    <img src="icons/switch_line.svg" alt="switch line icon" class="switch_line">
+                    <p>
+                        <label for="em">PCT</label>
+                        <input type="text" name="percent" id="percent">
+                    </p>
+                </div>
+
+                <div aria-label="default base unit" class="default_unit_div">
+                    <p class="base_unit">This is calculated based on <span class="generated_base_unit">16</span>px <span class="change_text">default font-size.</span></p>
+                    <p>
+                        <label for="new_base_unit">Change default pixel unit: </label>
+                        <input type="number" name="new_base_unit" id="new_base_unit">
+                    </p>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <section>
+            <div class="copyright">
+                &copy; <a href="https://twitter.com/StanleyAzi" target="_blank" rel="noopener">Stanley Azi 2024.</a>
+            </div>
+
+            <div class="contacts">
+                <a href="https://www.linkedin.com/in/stanley-azi-475044217/" target="_blank" rel="noopener"><img src="icons/linkedin.svg" alt="linkedin"></a>
+                <a href="https://twitter.com/StanleyAzi" target="_blank" rel="noopener"><img src="icons/twitter.svg" alt="twitter"></a>
+                <a href="https://www.instagram.com/stanleyazi/" target="_blank" rel="noopener"><img src="icons/instagram.svg" alt="instagram"></a>
+            </div>
+        </section>
+    </footer>
 
     <script src="script.js"></script>
 </body>
